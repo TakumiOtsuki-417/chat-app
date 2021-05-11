@@ -10,6 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrap-all">
+      <div class="wrap-side-bar">
+        <div class="header-side-bar">
+        </div>
+        <div class="content-side-bar">
+          <%= render "side_bar" %>
+        </div>
+      </div>
+      <div class="wrap-main-chat">
+        <div class="header-main-chat">
+        </div>
+        <div class="content-main-chat">
+          <%= render "main_chat" %>
+        </div>
+        <div class="footer-main-chat">
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,46 @@
+
+.wrap-all {
+  display:flex;
+}
+
+.wrap-side-bar {
+  height: 100vh;
+  width: 300px;
+  background-color: #253141;
+}
+
+.wrap-main-chat {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+
+.header-side-bar {
+  background-color: #253141;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.content-side-bar {
+  background-color: #2f3e51;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+}
+
+.header-main-chat {
+  background-color:#ffffff;
+  height: 100px;
+  padding: 0 40px;
+  padding-bottom: 46px;
+}
+
+.content-main-chat {
+  background-color: #fafafa;
+  height: calc(100vh - 100px - 90px);
+  padding: 0 20px;
+}
+
+.footer-main-chat {
+  background-color: #dddddd;
+  height: 90px;
+  padding: 20px 40px;
+}
