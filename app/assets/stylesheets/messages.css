@@ -34,12 +34,16 @@
   height: 100px;
   padding: 0 40px;
   padding-bottom: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content-main-chat {
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
-  padding: 0 20px;
+  padding:10px 20px 0;
+  overflow-y: scroll;
 }
 
 .footer-main-chat {
@@ -84,3 +88,91 @@
   text-decoration: none;
   color: white;
 }
+
+
+.group-name {
+  margin-top:36px;
+  font-size: 24px;
+  color: #333;
+}
+
+.chat-end {
+  border: 1px solid darkred;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.chat-end a {
+  color: darkred;
+  text-decoration: none;
+}
+
+
+.content-content-main-chat {
+  margin-bottom: 40px;
+}
+
+.meta-content-main-chat {
+  display:flex;
+  justify-content: flex-start;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+.name-content-main-chat {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #434a54;
+}
+
+.time-content-main-chat {
+  font-size: 12px;
+  color: #999;
+}
+
+.message-content-main-chat {
+  font-size: 14px;
+  color: #434a54;
+}
+
+.form-footer-main-chat {
+  display:flex
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-footer-main-chat input[name="message-text"] {
+  height: 50px;
+  width: 100%;
+  padding: 0 10px;
+  border: none;
+}
+
+.form-footer-main-chat input[name="commit"] {
+  background-color:#38aef0;
+  margin-left: 15px;
+  height: 50px;
+  color:white;
+  font-size:16px;
+  padding:0 20px;
+  border: none;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
