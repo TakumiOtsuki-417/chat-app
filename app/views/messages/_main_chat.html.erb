@@ -8,24 +8,7 @@
           </div>
         </div>
         <div class="content-main-chat">
-          <div class="content-content-main-chat">
-            <div class="meta-content-main-chat">
-              <div class="name-content-main-chat">Tom</div>
-              <div class="time-content-main-chat">2020/3/31(Wed) 12:43:30</div>
-            </div>
-            <div class="message-content-main-chat">
-              おはよう
-            </div>
-          </div>
-          <div class="content-content-main-chat">
-            <div class="meta-content-main-chat">
-              <div class="name-content-main-chat">Tom</div>
-              <div class="time-content-main-chat">2020/3/31(Wed) 12:43:30</div>
-            </div>
-            <div class="message-content-main-chat">
-              こんばんは
-            </div>
-          </div>
+          <%= render partial: 'message', collection: @messages %>
         </div>
         <div class="footer-main-chat">
         <%= form_with model: [@room, @message], class:'form-footer-main-chat', local: true do |f| %>
