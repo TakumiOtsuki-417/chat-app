@@ -1,7 +1,7 @@
           <div class="content-content-main-chat">
             <div class="meta-content-main-chat">
               <div class="name-content-main-chat"><%= message.user.name %></div>
-              <div class="time-content-main-chat"><%= message.created_at %></div>
+              <div class="time-content-main-chat"><%= l message.created_at %></div>
             </div>
             <div class="message-content-main-chat">
               <%= message.content %>
