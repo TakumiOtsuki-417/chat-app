@@ -145,7 +145,7 @@
   width: 100%;
 }
 
-.form-footer-main-chat input[name="message-text"] {
+.form-footer-main-chat .message-text {
   height: 50px;
   width: 100%;
   padding: 0 10px;
