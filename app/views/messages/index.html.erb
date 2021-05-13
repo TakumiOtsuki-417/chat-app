@@ -14,7 +14,7 @@
       <div class="wrap-side-bar">
         <div class="header-side-bar">
           <div class="username-header-side-bar">
-            <a>Tom</a>
+            <%= link_to current_user.name, edit_user_path(current_user) %>
           </div>
           <div class="newchat-header-side-bar">
             <a>チャットを作成する</a>
