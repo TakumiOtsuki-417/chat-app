@@ -1,42 +1,26 @@
       <div class="wrap-main-chat">
         <div class="header-main-chat">
           <div class="group-name">
-            hogefuga
+            <%= @room.name %>
           </div>
           <div class="chat-end">
-          <a href="#">チャットを終了する</a>
+          <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
           </div>
         </div>
         <div class="content-main-chat">
-          <div class="content-content-main-chat">
-            <div class="meta-content-main-chat">
-              <div class="name-content-main-chat">Tom</div>
-              <div class="time-content-main-chat">2020/3/31(Wed) 12:43:30</div>
-            </div>
-            <div class="message-content-main-chat">
-              おはよう
-            </div>
-          </div>
-          <div class="content-content-main-chat">
-            <div class="meta-content-main-chat">
-              <div class="name-content-main-chat">Tom</div>
-              <div class="time-content-main-chat">2020/3/31(Wed) 12:43:30</div>
-            </div>
-            <div class="message-content-main-chat">
-              こんばんは
-            </div>
-          </div>
+          <%= render partial: 'message', collection: @messages %>
         </div>
         <div class="footer-main-chat">
+        <%= form_with model: [@room, @message], class:'form-footer-main-chat', local: true do |f| %>
           <form class="form-footer-main-chat">
             <div class="form-input">
-              <input type="text" name="message-text" placeholder="type a message">
+            <%= f.text_field :content, class:'message-text', placeholder: 'type a message' %>
               <label class="form-image">
                 <span class="image-file">画像</span>
-                <input type="file" class="hidden">
+                <%= f.file_field :image, class:'hidden' %>
               </label>
             </div>
-            <input type="submit" name="commit" value="送信">
-          </form>
+            <%= f.submit '送信', class: 'form-submit', name:'commit' %>
+          <% end %>
         </div>
       </div>
