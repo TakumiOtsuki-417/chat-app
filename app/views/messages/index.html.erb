@@ -1,82 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ChatApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
     <div class="wrap-all">
-      <div class="wrap-side-bar">
-        <div class="header-side-bar">
-          <div class="username-header-side-bar">
-            <%= link_to current_user.name, edit_user_path(current_user) %>
-          </div>
-          <div class="newchat-header-side-bar">
-            <a>チャットを作成する</a>
-          </div>
-        </div>
-        <div class="content-side-bar">
-          <div class="room">
-            <div class="room-name">
-              <a href="#">techroom1</a>
-            </div>
-          </div>
-          <div class="room">
-            <div class="room-name">
-              <a href="#">techroom2</a>
-            </div>
-          </div>
+
+<%# サイドバー記述 %>
+
+
           <%= render "side_bar" %>
-        </div>
-      </div>
-      <div class="wrap-main-chat">
-        <div class="header-main-chat">
-          <div class="group-name">
-            hogefuga
-          </div>
-          <div class="chat-end">
-          <a href="#">チャットを終了する</a>
-          </div>
-        </div>
-        <div class="content-main-chat">
-          <div class="content-content-main-chat">
-            <div class="meta-content-main-chat">
-              <div class="name-content-main-chat">Tom</div>
-              <div class="time-content-main-chat">2020/3/31(Wed) 12:43:30</div>
-            </div>
-            <div class="message-content-main-chat">
-              おはよう
-            </div>
-          </div>
-          <div class="content-content-main-chat">
-            <div class="meta-content-main-chat">
-              <div class="name-content-main-chat">Tom</div>
-              <div class="time-content-main-chat">2020/3/31(Wed) 12:43:30</div>
-            </div>
-            <div class="message-content-main-chat">
-              こんばんは
-            </div>
-          </div>
+
+<%# メインチャット部分 %>
+
+      
           <%= render "main_chat" %>
-        </div>
-        <div class="footer-main-chat">
-          <form class="form-footer-main-chat">
-            <div class="form-input">
-              <input type="text" name="message-text" placeholder="type a message">
-              <label class="form-image">
-                <span class="image-file">画像</span>
-                <input type="file" class="hidden">
-              </label>
-            </div>
-            <input type="submit" name="commit" value="送信">
-          </form>
-        </div>
-      </div>
+
+
     </div>
-  </body>
-</html>
