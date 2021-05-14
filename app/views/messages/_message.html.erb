@@ -4,6 +4,7 @@
               <div class="time-content-main-chat"><%= l message.created_at %></div>
             </div>
             <div class="message-content-main-chat">
-              <%= message.content %>
+              <p><%= message.content %></p>
+              <div><%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %></div>
             </div>
           </div>
